@@ -1,0 +1,162 @@
+:root {
+    --persistent-blue: #00205b;
+    --persistent-light-blue: #00b1e1;
+    --persistent-dark-blue: #00163a;
+    --persistent-gray: #f4f6fb;
+    --persistent-accent: #ff6c2c;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--persistent-gray);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: var(--persistent-blue);
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.logo {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+h1 {
+    color: var(--persistent-light-blue);
+    margin: 0;
+    letter-spacing: 1px;
+}
+.tiles {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.tile {
+    background: var(--persistent-blue);
+    color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,32,91,0.10);
+    transition: background 0.2s, color 0.2s;
+    border: 2px solid var(--persistent-light-blue);
+}
+.tile:hover {
+    background: var(--persistent-dark-blue);
+    color: var(--persistent-accent);
+    border-color: var(--persistent-accent);
+}
+.form-container {
+    background: #fff;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border-top: 4px solid var(--persistent-light-blue);
+}
+label {
+    display: block;
+    margin-top: 1rem;
+    color: var(--persistent-blue);
+    font-weight: 600;
+}
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: var(--persistent-gray);
+}
+input:focus, select:focus {
+    border-color: var(--persistent-light-blue);
+    outline: none;
+}
+button[type="submit"],
+button.secondary {
+    padding: 0.7rem 2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    margin-left: 0;
+    box-shadow: 0 2px 8px rgba(0,32,91,0.08);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+button[type="submit"] {
+    background: var(--persistent-light-blue);
+    color: var(--persistent-blue);
+    border: none;
+}
+button[type="submit"]:hover, button[type="submit"]:focus {
+    background: var(--persistent-accent);
+    color: #fff;
+    outline: none;
+}
+button.secondary {
+    background: transparent;
+    color: var(--persistent-light-blue);
+    border: 2px solid var(--persistent-light-blue);
+    margin-left: 0.5rem;
+}
+button.secondary:hover, button.secondary:focus {
+    background: var(--persistent-light-blue);
+    color: var(--persistent-blue);
+    box-shadow: 0 4px 16px rgba(0,32,91,0.15);
+    outline: none;
+}
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+#result {
+    background: #e3f2fd;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: var(--persistent-blue);
+    text-align: center;
+    border-top: 4px solid var(--persistent-accent);
+}
+#result button.secondary {
+    margin-top: 1rem;
+}
+.hidden {
+    display: none !important;
+}
+.interest-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.interest-description {
+    min-width: 220px;
+    color: var(--persistent-accent);
+    font-size: 0.98rem;
+    font-style: italic;
+    transition: color 0.2s;
+}
+@media (max-width: 600px) {
+    .form-container, #result {
+        max-width: 95vw;
+        padding: 1rem;
+    }
+    .tile {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    .interest-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+    .interest-description {
+        min-width: 0;
+    }
+}
