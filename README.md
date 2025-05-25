@@ -18,4 +18,3 @@ Open `index.html` in your browser to use the portal.
 
 ---
 
-For customization, edit the HTML, CSS, or JS files as needed.
